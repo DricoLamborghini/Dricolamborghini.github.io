@@ -1,0 +1,22 @@
+const games = {
+    game1: {
+        title: "OG 1V1.LOL",
+        description: "1v1 game ig.",
+        image: "https://github.com/DricoLamborghini/OGv1.LOL/blob/main/logo.png?raw=true",
+        link: "https://dricolamborghini.github.io/OGv1.LOL/" 
+    }
+};
+
+function openPopup(gameId) {
+    const game = games[gameId];
+    document.getElementById("popup-title").innerText = game.title;
+    document.getElementById("popup-description").innerText = game.description;
+    document.getElementById("popup-image").src = game.image;
+    document.getElementById("play-button").href = game.link;
+
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
